@@ -35,7 +35,7 @@ namespace CYOAStructures
             lines = new List<string>();
         }
 
-        public void AppendLine(string line)
+        public void AddLine(string line)
         {
             lines.Add(line);
         }

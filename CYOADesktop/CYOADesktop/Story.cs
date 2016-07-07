@@ -23,14 +23,33 @@ namespace CYOAStructures
         public Page StartPage { get; set; }
         public string Title { get; set; }
 
-        public Story()
+        public Story(string title, Page start)
         {
-            StartPage = null;
+            Title = title;
+            StartPage = start;
+
+            pages = new List<Page>();
         }
+
+        public Story(string title)
+            : this(title, null) {}
+
+        public Story()
+            : this("", null) {}
 
         public void AddPage(Page page)
         {
             pages.Add(page);
+        }
+
+        public Page getPageFromId(int id)
+        {
+            return pages[id];
+        }
+
+        public int GetPageId(Page page)
+        {
+            return pages.IndexOf(page);
         }
 
     }

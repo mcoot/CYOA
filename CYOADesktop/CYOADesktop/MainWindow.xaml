@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CYOADesktop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
-        
+        <Button x:Name="btnTestWrite" Content="Test Write" HorizontalAlignment="Left" Margin="99,121,0,0" VerticalAlignment="Top" Width="75" Click="btnTestWrite_Click"/>
+
     </Grid>
 </Window>
