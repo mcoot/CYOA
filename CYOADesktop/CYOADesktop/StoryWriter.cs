@@ -5,7 +5,7 @@ using System.Text;
 using System.Xml;
 using System.Threading.Tasks;
 
-namespace CYOAStructures
+namespace CYOA.Structures
 {
     class StoryWriter
     {
@@ -19,6 +19,7 @@ namespace CYOAStructures
             // Write the story title / starting page
             writer.WriteStartElement("Story");
             writer.WriteAttributeString("Title", story.Title);
+            writer.WriteAttributeString("NumPages", story.Pages.Count.ToString());
             writer.WriteAttributeString("StartId", story.GetPageId(story.StartPage).ToString());
 
             // Write all pages in the story

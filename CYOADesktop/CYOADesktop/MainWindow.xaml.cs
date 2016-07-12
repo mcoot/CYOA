@@ -20,21 +20,21 @@ namespace CYOADesktop
     /// </summary>
     public partial class MainWindow : Window
     {
-        private CYOAStructures.Story testStory;
+        private CYOA.Structures.Story testStory;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private CYOAStructures.Story genTestStory()
+        private CYOA.Structures.Story genTestStory()
         {
-            CYOAStructures.Story story = new CYOAStructures.Story("Bob Goes To The Fish Market");
+            CYOA.Structures.Story story = new CYOA.Structures.Story("Bob Goes To The Fish Market");
 
-            CYOAStructures.Page p1 = new CYOAStructures.Page();
-            CYOAStructures.Page p2 = new CYOAStructures.Page();
-            CYOAStructures.Page p3 = new CYOAStructures.Page();
-            CYOAStructures.Page p4 = new CYOAStructures.Page();
+            CYOA.Structures.Page p1 = new CYOA.Structures.Page();
+            CYOA.Structures.Page p2 = new CYOA.Structures.Page();
+            CYOA.Structures.Page p3 = new CYOA.Structures.Page();
+            CYOA.Structures.Page p4 = new CYOA.Structures.Page();
 
             p1.AddLine("Bob went to the fish market.");
             p1.AddLine("There, Bob saw several fish for purchase.");
@@ -66,12 +66,19 @@ namespace CYOADesktop
 
         private void btnTestWrite_Click(object sender, RoutedEventArgs e)
         {
-            CYOAStructures.StoryWriter.Write("testStory.xml", testStory);
+            CYOA.Structures.StoryWriter.Write("testStory.xml", testStory);
+            Console.WriteLine("Test story written");
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             testStory = genTestStory();
+        }
+
+        private void btnTestRead_Click(object sender, RoutedEventArgs e)
+        {
+            CYOA.Structures.Story readStory = CYOA.Structures.StoryReader.Read("testStory.xml");
+            Console.WriteLine("Test story read");
         }
     }
 }

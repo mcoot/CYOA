@@ -8,6 +8,7 @@
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
     <Grid>
         <Button x:Name="btnTestWrite" Content="Test Write" HorizontalAlignment="Left" Margin="99,121,0,0" VerticalAlignment="Top" Width="75" Click="btnTestWrite_Click"/>
+        <Button x:Name="btnTestRead" Content="Test Read" HorizontalAlignment="Left" Margin="199,121,0,0" VerticalAlignment="Top" Width="75" Click="btnTestRead_Click"/>
 
     </Grid>
 </Window>

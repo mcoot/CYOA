@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CYOAStructures
+namespace CYOA.Structures
 {
     class Story
     {
