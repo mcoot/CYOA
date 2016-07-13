@@ -65,7 +65,12 @@ namespace CYOA.Structures
             branches[option] = page;
         }
 
-        public bool IsDeadEnd()
+       public bool BranchExists(string option)
+        {
+            return Branches.ContainsKey(option);
+        } 
+
+       public bool IsDeadEnd()
         {
             return (branches.Count <= 0);
         }
